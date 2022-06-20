@@ -31,8 +31,14 @@ const routes =  [
     path: "/missionCommander",
     name: "missionCommander",
     component: () => import("./components/MissionCommanderList")
+  },
+
+  // Actualizar registros
+  {
+    path: "/newMissionCommander/:id",
+    name: "missionCommander-details",
+    component: () => import("./components/MissionCommander")
   }
-  
 
 ];
 

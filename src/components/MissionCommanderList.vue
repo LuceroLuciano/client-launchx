@@ -5,23 +5,23 @@
             <ul class="list-group">
                 <li class="list-group-item"
                     :class="{ active: index == currentIndex }"
-                    v-for="(newMissionCommander, index) in newMissionCommander"
+                    v-for="(missionCommander, index) in missionCommanders"
                     :key="index"
-                    @click="setActiveNewMissionCommander(newMissionCommander, index)"
+                    @click="setActiveMissionCommander(missionCommander, index)"
                 >
-                {{ newMissionCommander.username }}
+                {{ missionCommander.username }}
                 </li>
             </ul>
         </div>
         <div class="col-md-6">
-            <div v-if="currenNewMissionCommander">
+            <div v-if="currenMissionCommander">
                 <h4>Mission Commander</h4>
                 <div>
-                    <br><label><strong>Nombre:</strong></label>{{ currenNewMissionCommander.name }}
-                    <br><label><strong>Username:</strong></label>{{ currenNewMissionCommander.username }}
-                    <br><label><strong>MainStack:</strong></label>{{ currenNewMissionCommander.mainStack }}
+                    <br><label><strong>Nombre:</strong></label>{{ currenMissionCommander.name }}
+                    <br><label><strong>Username:</strong></label>{{ currenMissionCommander.username }}
+                    <br><label><strong>MainStack:</strong></label>{{ currenMissionCommander.mainStack }}
                 </div>
-                <router-link :to="'/newMissionCommander/' + currenNewMissionCommander.id" class="btn btn-info">Editar</router-link>
+                <router-link :to="'/newMissionCommander/' + currenMissionCommander.id" class="btn btn-info">Editar</router-link>
             </div>
             <div v-else>
                 <br />
@@ -32,33 +32,32 @@
 </template>
 <script>
 import ExplorerService from "../services/ExplorerService";
-
 export default {
-  name: "missionCommander",
+  name: "missionCommander-list",
   data() {
     return {
       tutorials: [],
-      newMissionCommander: [],
+      missionCommanders: [],
       currentTutorial: null,
-      currenNewMissionCommander: null,
+      currenMissionCommander: null,
       currentIndex: -1,
       title: "",
-      explorerId: ""
+      missionCommanderId: ""
     };
   },
   methods: {
     getAllMC(){
       ExplorerService.getAllMC()
         .then(response => {
-          this.newMissionCommander = response.data;
+          this.missionCommanders = response.data;
         })
         .catch(e => {
           console.log(e);
         });
     },
-    setActiveNewMissionCommander(newMissionCommander, index) {
-      this.currentNewMissionCommander= newMissionCommander;
-      this.currentIndex = newMissionCommander? index : -1;
+    setActiveMissionCommander(missionCommander, index)  {
+      this.currenMissionCommander= missionCommander;
+      this.currentIndex = missionCommander? index : -1;
     }
   },
   mounted() {
