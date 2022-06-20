@@ -18,11 +18,21 @@ const routes =  [
   },
 
   // Rutas para NewMissionCommander
+  
+  // Agregar nuevo registro
   {
     path: "/addMissionCommander",
     name: "add-newMissionCommander",
     component: () => import("./components/AddNewMissionCommander")
+  },
+
+  // Mostrar registros
+  {
+    path: "/missionCommander",
+    name: "missionCommander",
+    component: () => import("./components/MissionCommanderList")
   }
+  
 
 ];
 
