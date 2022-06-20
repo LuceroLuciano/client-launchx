@@ -64,8 +64,8 @@ export default {
           console.log(e);
       });
     },
-    updateMissionCommander() {
-      ExplorerService.updateMC(this.currentMissionCommander.id, this.currentMissionCommander)
+    updateMissionCommander() { 
+      ExplorerService.updateMC(this.currenMissionCommander.id, this.currenMissionCommander)
         .then(response => {
           console.log(response.data);
           this.message = 'Se actualizó correctamente';
