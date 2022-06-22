@@ -46,6 +46,10 @@ Dentro del archivo `server.js` se crea el API CRUD con los siguientes Endpoints:
 - Correr el cliente **npm run serve**
 
 
+## Ejecutar el proyecto en local
+[Ejcutar el proyecto en local](https://github.com/LuceroLuciano/Prissma-API/blob/main/README.md)
+
+
 ## Project setup
 ```
 npm install
