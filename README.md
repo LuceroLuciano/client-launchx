@@ -2,6 +2,10 @@
 
 ![Diagrama](https://raw.githubusercontent.com/LuceroLuciano/client-launchx/master/img/diagrama.png)
 
+
+## Ejecutar el proyecto en local
+[Ejcutar el proyecto en local](https://github.com/LuceroLuciano/Prissma-API/blob/main/README.md) <br>
+
 ### API - Express (Servidor)
 
 El siguiente diagrama muestra la creación de una API, desde la creación del cliente(Frontend) y el servidor(Backend). 
@@ -44,10 +48,6 @@ Dentro del archivo `server.js` se crea el API CRUD con los siguientes Endpoints:
 
 - La **App cliente** estará en la siguiente URL: `http://localhost:8081`. Agrega lo siguiente en el `server.js`:
 - Correr el cliente **npm run serve**
-
-
-## Ejecutar el proyecto en local
-[Ejcutar el proyecto en local](https://github.com/LuceroLuciano/Prissma-API/blob/main/README.md)
 
 
 ## Project setup
