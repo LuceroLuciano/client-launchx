@@ -4,7 +4,7 @@
 
 
 ## Ejecutar el proyecto en local
-[Ejcutar el proyecto en local](https://github.com/LuceroLuciano/Prissma-API/blob/main/README.md) <br>
+[Ejecutar el proyecto en local](https://github.com/LuceroLuciano/Prissma-API/blob/main/README.md) <br>
 
 ### API - Express (Servidor)
 
